@@ -1,0 +1,185 @@
+.phone-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(99, 102, 241, 0.08);
+}
+
+.phone-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+}
+
+.phone-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+}
+
+.tag-hot { background: linear-gradient(135deg, #f43f5e, #ec4899); }
+.tag-mới { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+.tag-giảm-sốc { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+.tag-bán-chạy { background: linear-gradient(135deg, #10b981, #059669); }
+.tag-giá-tốt { background: linear-gradient(135deg, #0ea5e9, #0284c7); }
+
+.phone-image-wrap {
+  height: 220px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.phone-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.4s;
+}
+
+.phone-card:hover .phone-image {
+  transform: scale(1.08);
+}
+
+.phone-info {
+  padding: 18px 20px 22px;
+}
+
+.phone-brand {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6366f1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.phone-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 6px 0 10px;
+  line-height: 1.3;
+}
+
+.phone-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+}
+
+.stars {
+  color: #f59e0b;
+  letter-spacing: -1px;
+}
+
+.rating-value {
+  font-weight: 600;
+  color: #64748b;
+}
+
+.sold {
+  color: #94a3b8;
+  margin-left: auto;
+  font-size: 0.8rem;
+}
+
+.phone-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.phone-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ef4444;
+}
+
+.phone-old-price {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.phone-discount {
+  background: #fef2f2;
+  color: #ef4444;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.phone-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-view {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-view:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-add-cart {
+  width: 44px;
+  padding: 10px;
+  border: 2px solid #c7d2fe;
+  border-radius: 12px;
+  background: white;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+.btn-add-cart:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+  transform: scale(1.05);
+}
+
+/* Toast */
+.toast-success {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  z-index: 9999;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  animation: toastIn 0.3s ease;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
